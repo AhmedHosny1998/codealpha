@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/icon" href="/codealpha/task 1/image/top-view-vegetables-with-spices-black-surface.jpg" >
+    <title> Recipe Book</title>
+    <link rel="stylesheet" href="./font-awesome/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <script src="./font-awesome/js/all.min.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+
+</head>
+
+<body class="">
+    <script>
+        start_loader()
+    </script>
+
+    <main>
+
+
+
+
+        <div class="container" style="background-color: black; margin-top: -20px;">
+            <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+            <div class="container">
+            <a class="navbar-brand fst-italic" href="index.html">Recip Book</a>
+            <div class="social-media order-lg-last">
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-3auto mr-md-3  fst-italic">
+            <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Work</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+            </div>
+            </div>
+            </nav>
+            
+            </div>
+        
+
+
+
+            <div class="alert alert-warning container text-center text-uppercase fst-italic" role="alert">
+                We stand with the people of Palestine
+
+                <span><img src="image/palestine.png" class="img-thumbnail" alt="Palestine" style="width: 27px; margin: 0px 15px 0px;"></span>
+              </div>
+
+
+
+
+              
+
+
+
+
+        <div class="col-lg-12 fst-italic">
+            <h1 class="fw-bolder text-center" id="project-title">Recipe Book Website</h1>
+        </div>
+        <div class="container w-100">
+            <div class="card rounded-0 shadow bg-black bg-opacity-75 text-light">
+                <div class="card-body">
+                    <div class="col-lg-12" style="display:none" id="recipe-form-holder">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 col-md-10 col-sm-12 col-sm 12">
+                                <h3 id="form-title" class="text-center fw-bolder">Add New Recipe</h3>
+                                <form action="" id="recipe-form">
+                                    <input type="hidden" name="id">
+                                    <div class="form-group mb-3">
+                                        <label for="name" class="control-label">Recipe</label>
+                                        <input type="text" id="name" name="name" class="form-control form-control-lg bg-dark text-light">
+                                    </div>
+                                    <div class="form-group mb-2">
+                                        <label for="description" class="control-label">Description</label>
+                                        <textarea rows="2" id="description" name="description" class="form-control form-control-lg bg-dark text-light"></textarea>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <div class="d-flex w-100 align-items-end">
+                                            <div class="col-8">
+                                                <input type="text" id="ingredient-txtfield" class="form-control form-control-sm rounded-0 bg-dark text-light" placeholder="Enter Ingredient Here">
+                                            </div>
+                                            <div class="col-auto">
+                                                <button class="btn btn-primary btn-sm rounded-0" type="button" id="new_ingredient"><i class="fa fa-plus"></i> Add Ingredient</button>
+                                            </div>
+                                        </div>
+                                        <div id="ingredient-list">
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <button class="btn btn-success rounded-0"><i class="fa fa-save"></i> Apply</button>
+                                        <button class="btn btn-light bg-gradient rounded-0" type="button" id="cancel-form"><i class="fa fa-times"></i> Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12" id="recipe-list-holder">
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <input type="search" id="search" class="form-control bg-dark border-light text-light" placeholder="Search Recipe">
+                                    <button class="btn btn-outline-light" type="button"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-md-6 text-end">
+                                <button class="btn btn-primary rounded-0 btn-sm" id="add_recipe" type="button"><i class="fa fa-plus"></i>Add New Recipe</button>
+                            </div>
+                        </div>
+                        <div class="list-group" id="recipe-list">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        
+    </main>
+    <div class="modal fade" id="viewModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="viewModalLabel">Recipe Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <h3 class="fw-bolder" id="modal-recipe-name"></h3>
+                        <hr>
+                        <p id="modal-recipe-description"></p>
+                        <ul class="list-group" id="modal-ingredients"></ul>
+                    </div>
+                </div>
+
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light border btn-sm rounded-0" data-bs-dismiss="modal">Close</button>
+                </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+    </div>
+</body>
+<noscript id="ing-clone">
+<div class="ingredient-item d-flex w-100 align-items-center">
+    <div class="col-auto px-2 py-1 my-2">
+        <input type="hidden" name="ingredient[]" class="ingredient-name" value="">
+        <input type="checkbox" class="btn-check ingredient-check" name="ingredient_checked[]" id="ingredient_" autocomplete="off">
+        <label class="btn btn-outline-primary btn-sm ing-check" for="ingredient_"><i class="fa fa-check text-dark"></i></label>
+    </div>
+    <div class="col-auto mx-2 py-1">
+        <span class="text-light ingredient-name">Sample 101</span>
+    </div>
+    <div class="col-auto mx-2 py-1">
+        <button class="btn btn-outline-danger btn-sm rounded-circle del-ingredient" type="button"><i class="fa fa-times"></i></button>
+    </div>
+</div>
+</noscript>
+<noscript id="recipe-item-clone">
+<div class="list-group-item  bg-dark text-light">
+    <h3 class="fw-bold recipe-title">Sample Recipe</h3>
+    <hr>
+    <p class="text-truncate recipe-description"></p>
+    <small><span class="ing-status"></span></small>
+    <hr>
+    <div class="text-center">
+        <button class="btn btn-light bg-gradient btn-sm rounded-0 view-data" type="button"><i class="fa fa-eye"></i> View</button>
+        <button class="btn btn-primary bg-gradient btn-sm rounded-0 edit-data" type="button"><i class="fa fa-edit"></i> Edit</button>
+        <button class="btn btn-danger bg-gradient btn-sm rounded-0 delete-data" type="button"><i class="fa fa-trash"></i> Delete</button>
+    </div>
+</div>
+</noscript>
+
+
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">“While our company has grown, we have stayed true to our original vision – to be a coffeehouse with good food. We’re on a mission to make people feel good.” – Good Earth Coffee House.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li><a href="http://scanfcode.com/category/c-language/">Espresso</a></li>
+            <li><a href="http://scanfcode.com/category/front-end-development/">Mocha</a></li>
+            <li><a href="http://scanfcode.com/category/back-end-development/">Americano</a></li>
+            <li><a href="http://scanfcode.com/category/java-programming-language/">Irish coffee</a></li>
+            <li><a href="http://scanfcode.com/category/android/">Café au lait</a></li>
+            
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="http://scanfcode.com/about/">About Us</a></li>
+            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+            <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by 
+       <a href="#">Hosny</a>.
+          </p>
+        </div>
+
+        
+      </div>
+    </div>
+</footer>
+
+
+
+
+
+</html>
