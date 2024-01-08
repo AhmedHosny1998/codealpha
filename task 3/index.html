@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://chancejs.com/chance.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body style="background-color: black;">
+
+
+    <div class="container">
+        <div class="container">
+            <h1 class="glow">ISSUE TRACKER</h1>
+            <div class="alert alert-warning" role="alert" style="text-align: center; color:red;"> Our chests are filled with pain and sadness over what is happening to you, Palestine. Stay strong, for God’s victory is coming.
+
+            </div>
+
+            <div class="jumbotron">
+              <h3>ADD ISSUE</h3>
+              <form id="issueInputForm">
+                <div class="form-group">
+                  <label for="description">DETAILS</label>
+                  <input type="text" class="form-control" id="issueDesc" placeholder="Describe the issue...">
+                </div>
+
+
+                <div class="form-group">
+                    <label for="severity">PRIORITY</label>
+                    <select id="issueSev" class="form-control">
+                      <option value="Low">Low</option>
+                      <option value="Medium">Medium</option>
+                      <option value="High">High</option>
+                    </select>
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label for="assign">Assigned To</label>
+                    <input type="text" class="form-control" id="issueAssign" placeholder="Enter responsible...">
+                  </div>
+
+
+                  <div class="form-group">
+                    <button type="button" class="btn btn-primary" onClick="AddIssue(event)">Add</button>
+                  </div>
+
+                  </form>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div id="issueList"></div>
+                    </div>
+        </div>
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>
